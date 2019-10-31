@@ -1,90 +1,104 @@
 <div class="Form">
-  <form class="" [formGroup]="headForm">
-      <input type="hidden" class="form-control font-weight-bold" name="id" value=""#id>
-  <div class="row ">
-  <div class="col-md-4 pr-1">
-  <div class="row">
-  <div class="col-md-12">
-  <div class="row">
-  <div class="bg-warning  card-header-ss col-12">
-  <h6 class="h6-ss  text-uppercase">Size</h6>
-  </div>
-  <div class=" col-4 text-right bg-warning">
-  </div>
-  </div>
-  <div class="input-group input-group-sm">
-  <div class="input-group-prepend">
-  <span class="input-group-text ">Size</span>
-  </div>
-  <input type="hidden" class="form-control font-weight-bold"  formControlName="id" value="">
-  <input type="hidden" class="form-control font-weight-bold"  formControlName="menu_id" value="6">
-  <input type="text" class="form-control font-weight-bold"  formControlName="size" value="">
-  </div>
-  </div>
-  </div>
-  </div>
-  <div class="col-md-6">
-  <div class="row">
-  <div class="col-12 pr-1">
-  <div class="row">
-  <div class="card-header bg-info card-header-ss col-md-12">
-  <h6 class="h6-ss text-white">Size</h6>
-  </div>
-  <table id="tblInventory" class="table table-sm table-bordered border border-primary bg-light ">
-  <thead>
-  <tr class="bg-heading">
-  <td class="text-center" style="width: 100px">Size 1</td>	
-  <td class="text-center" style="width: 100px">Size 2</td>	
-  <td class="text-center" style="width: 100px">Size 3</td>	
-  <td class="text-center" style="width: 100px">Size 4</td>
-  <td class="text-center" style="width: 100px">Size 5</td>	
-  <td class="text-center" style="width: 100px">Size 6</td>
-  <td class="text-center" style="width: 100px">Size 7</td>
-  <td class="text-center" style="width: 100px">Size 8</td>
-  <td class="text-center" style="width: 100px">Size 9</td>	
-  </tr>
-  </thead>
-  <tbody class="heading" style="background-size: lightgreen">
-  <td class="input-group-sm"><input type="text" class="form-control font-weight-bold text-right"  formControlName="size1" value=""></td>
-  <td class="input-group-sm"><input type="text" class="form-control font-weight-bold text-right"  formControlName="size2" value=""></td>
-  <td class="input-group-sm"><input type="text" class="form-control font-weight-bold text-right"  formControlName="size3" value=""></td>
-  <td class="input-group-sm"><input type="text" class="form-control font-weight-bold text-right"  formControlName="size4" value=""></td>
-  <td class="input-group-sm"><input type="text" class="form-control font-weight-bold text-right"  formControlName="size5" value=""></td>
-  <td class="input-group-sm"><input type="text" class="form-control font-weight-bold text-right"  formControlName="size6" value=""></td>
-  <td class="input-group-sm"><input type="text" class="form-control font-weight-bold text-right"  formControlName="size7" value=""></td>
-  <td class="input-group-sm"><input type="text" class="form-control font-weight-bold text-right"  formControlName="size8" value=""></td>
-  <td class="input-group-sm"><input type="text" class="form-control font-weight-bold text-right"  formControlName="size9" value=""></td>
-  </tbody>
-  </table>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </form>
-  <div class="text-center bg-light col-10">
-      <a class="ml-1 bg-success" mat-mini-fab (click)="simsInsert()" *ngIf="!id.value"><mat-icon>add</mat-icon></a>
-      <a  class="ml-1 bg-success"  mat-mini-fab  (click)="simsUpdate(id.value)" *ngIf="id.value"><mat-icon>edit</mat-icon></a>
-      <a class="ml-1" mat-mini-fab color="primary" (click)="simsList()" title="List" accesskey="l"><mat-icon>list</mat-icon></a>
-      <a  class="ml-1 bg-danger" mat-mini-fab *ngIf="id.value" (click)="simsDelete(id.value)" title="Delete"><mat-icon class="">delete</mat-icon></a>
-      <a  class="ml-1"  mat-mini-fab routerLink="." (click)="simsNew()"><mat-icon>open_in_new</mat-icon></a>
-      </div>
+    <form class="" [formGroup]="headForm">
+        <input type="hidden" class="form-control font-weight-bold" name="id" value="" #id>
+        <div class="row ">
+            <div class="col-md-4 pr-1">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="bg-warning  card-header-ss col-12">
+                                <h6 class="h6-ss  text-uppercase">Size1</h6>
+                            </div>
+                            <div class=" col-4 text-right bg-warning">
+                            </div>
+                        </div>
+                        <div class="input-group input-group-sm">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text ">Size</span>
+                            </div>
+                            <input type="hidden" class="form-control font-weight-bold" formControlName="id" value="">
+                            <input type="hidden" class="form-control font-weight-bold" formControlName="menu_id" value="6">
+                            <input type="text" class="form-control font-weight-bold" formControlName="size" value="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-12 pr-1">
+                        <div class="row">
+                            <div class="card-header bg-info card-header-ss col-md-12">
+                                <h6 class="h6-ss text-white">Size</h6>
+                            </div>
+                            <table id="tblInventory" class="table table-sm table-bordered border border-primary bg-light ">
+                                <thead>
+                                    <tr class="bg-heading">
+                                        <td class="text-center" style="width: 100px">Size 1</td>
+                                        <td class="text-center" style="width: 100px">Size 2</td>
+                                        <td class="text-center" style="width: 100px">Size 3</td>
+                                        <td class="text-center" style="width: 100px">Size 4</td>
+                                        <td class="text-center" style="width: 100px">Size 5</td>
+                                        <td class="text-center" style="width: 100px">Size 6</td>
+                                        <td class="text-center" style="width: 100px">Size 7</td>
+                                        <td class="text-center" style="width: 100px">Size 8</td>
+                                        <td class="text-center" style="width: 100px">Size 9</td>
+                                    </tr>
+                                </thead>
+                                <tbody class="heading" style="background-size: lightgreen">
+                                    <td class="input-group-sm"><input type="text" class="form-control font-weight-bold text-right" formControlName="size1" value=""></td>
+                                    <td class="input-group-sm"><input type="text" class="form-control font-weight-bold text-right" formControlName="size2" value=""></td>
+                                    <td class="input-group-sm"><input type="text" class="form-control font-weight-bold text-right" formControlName="size3" value=""></td>
+                                    <td class="input-group-sm"><input type="text" class="form-control font-weight-bold text-right" formControlName="size4" value=""></td>
+                                    <td class="input-group-sm"><input type="text" class="form-control font-weight-bold text-right" formControlName="size5" value=""></td>
+                                    <td class="input-group-sm"><input type="text" class="form-control font-weight-bold text-right" formControlName="size6" value=""></td>
+                                    <td class="input-group-sm"><input type="text" class="form-control font-weight-bold text-right" formControlName="size7" value=""></td>
+                                    <td class="input-group-sm"><input type="text" class="form-control font-weight-bold text-right" formControlName="size8" value=""></td>
+                                    <td class="input-group-sm"><input type="text" class="form-control font-weight-bold text-right" formControlName="size9" value=""></td>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="text-center bg-light col-10">
+        <a class="ml-1 bg-success" mat-mini-fab (click)="simsInsert()" *ngIf="!id.value">
+            <mat-icon>add</mat-icon>
+        </a>
+        <a class="ml-1 bg-success" mat-mini-fab (click)="simsUpdate(id.value)" *ngIf="id.value">
+            <mat-icon>edit</mat-icon>
+        </a>
+        <a class="ml-1" mat-mini-fab color="primary" (click)="simsList()" title="List" accesskey="l">
+            <mat-icon>list</mat-icon>
+        </a>
+        <a class="ml-1 bg-danger" mat-mini-fab *ngIf="id.value" (click)="simsDelete(id.value)" title="Delete">
+            <mat-icon class="">delete</mat-icon>
+        </a>
+        <a class="ml-1" mat-mini-fab routerLink="." (click)="simsNew()">
+            <mat-icon>open_in_new</mat-icon>
+        </a>
     </div>
-    <div class="List" *ngIf="!isForm">
-        <table id="tblLists" class="table table-sm table-bordered border border-primary bg-light">
+</div>
+<div class="List" *ngIf="!isForm">
+    <table id="tblLists" class="table table-sm table-bordered border border-primary bg-light">
         <thead>
-        <tr class="bg-heading">
-        <td class="text-center">size</td>
-        
-        <td class="text-center">Action</td>
-        </tr>
+            <tr class="bg-heading">
+                <td class="text-center">size</td>
+
+                <td class="text-center">Action</td>
+            </tr>
         </thead>
         <tbody class="part1">
-        <tr class="" *ngFor="let row of rows">
-        <td class="text-center">{{row.size}}</td>
-        
-        <td class="text-center"><a href="javascript:" (click)="simsView(row.id)"><mat-icon>edit</mat-icon></a></td>
-        </tr>
+            <tr class="" *ngFor="let row of rows">
+                <td class="text-center">{{row.size}}</td>
+
+                <td class="text-center">
+                    <a href="javascript:" (click)="simsView(row.id)">
+                        <mat-icon>edit</mat-icon>
+                    </a>
+                </td>
+            </tr>
         </tbody>
-        </table>
-        </div>
+    </table>
+</div>
